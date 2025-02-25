@@ -1,0 +1,8 @@
+aws_region               = "<SPECIFY YOUR REGION>" #Example, us-east-1
+access_key               = "< YOUR AWS ACCOUNT ACCESS KEY>"
+secret_key               = "<YOUR AWS ACCOUNT ACCESS SECRET>"
+en_bucket_name           = "<choose an unique bucket name>"
+es_bucket_name           = "<choose an unique bucket name>"
+pt_bucket_name           = "<choose an unique bucket name>"
+codepipeline_bucket_name = "<choose an unique bucket name>"
+github_repository_url    = "<gitURL>" #joedoe/contenttranslationpipeline

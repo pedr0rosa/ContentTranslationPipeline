@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+       - ls
+       - aws s3 sync . s3://en-bucket-transl-ppline
+       - aws s3 sync . s3://es-bucket-transl-ppline
+       - aws s3 sync . s3://pt-bucket-transl-ppline
+       - python translate.py en es index.html
+       - aws s3 cp es-index.html s3://es-bucket-transl-ppline/index.html
+       - python translate.py en pt index.html
+       - aws s3 cp pt-index.html s3://pt-bucket-transl-ppline/index.html
